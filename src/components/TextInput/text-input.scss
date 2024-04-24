@@ -16,5 +16,9 @@
     &:focus {
       outline: none;
     }
+
+    &.invalid {
+      border: 1px solid #e63838;
+    }
   }
 }

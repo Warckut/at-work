@@ -7,6 +7,10 @@ input[type="submit"].btn {
   font-size: 16px;
 
   &:hover {
+    opacity: 70%;
+  }
+
+  &:active {
     background-color: $bg-color;
     color: $dark-gray-color;
   }

@@ -1,0 +1,44 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    min-width: 310px;
+    min-height: 211px;
+    background-color: $white-color;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__message {
+    margin-top: 30px;
+    color: $dark-gray-color;
+    font-size: 20px;
+    display: block;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background-color: transparent;
+    color: $black-color;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+  }
+}

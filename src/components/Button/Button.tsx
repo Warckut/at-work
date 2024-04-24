@@ -5,15 +5,15 @@ interface ButtonProps {
   onSubmit: () => void;
 }
 
-const Button = ({ name, onSubmit }: ButtonProps) => {
+const Button = ({ name, }: ButtonProps) => {
   return (
     <input
       className="btn"
       type="submit"
-      onClick={(e) => {
-        e.preventDefault();
-        onSubmit();
-      }}
+      // onClick={(e) => {
+      //   e.preventDefault();
+      //   onSubmit();
+      // }}
       value={name}
     />
   );

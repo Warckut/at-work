@@ -1,18 +1,26 @@
+import {
+  FieldValues,
+  UseControllerProps,
+  useController,
+} from "react-hook-form";
 import "./text-input.scss";
 
-interface TextInputParams {
-  label: string;
-  value: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
+function TextInput<T extends FieldValues>(
+  props: UseControllerProps<T> & { label: string }
+) {
+  const { field, fieldState } = useController(props);
 
-const TextInput = ({ label, value, onChange }: TextInputParams) => {
   return (
     <div className="input-group">
-      <label htmlFor={label}>{label}</label>
-      <input type="text" id={label} value={value} onChange={onChange} />
+      <label htmlFor={props.label}>{props.label}</label>
+      <input
+        className={fieldState.invalid ? "invalid" : ""}
+        type="text"
+        id={props.label}
+        {...field}
+      />
     </div>
   );
-};
+}
 
 export default TextInput;
