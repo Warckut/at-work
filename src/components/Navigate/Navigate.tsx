@@ -6,14 +6,16 @@ const Navigate = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  if (location.pathname === '/') return;
+  if (location.pathname === "/") return;
 
   return (
-    <div className="navigate container">
-      <a onClick={() => navigate(-1)}>
-        <img src={goBack} alt="back" />
-        <span>Назад </span>
-      </a>
+    <div className="container">
+      <div className="navigate">
+        <a onClick={() => navigate(-1)}>
+          <img src={goBack} alt="back" />
+          <span>Назад </span>
+        </a>
+      </div>
     </div>
   );
 };

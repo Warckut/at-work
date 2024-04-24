@@ -2,11 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import photo from "../../assets/photo.png";
-import {
-  selectLoading,
-  selectUsers,
-  update,
-} from "../../app/features/users/usersSlice";
+import { selectUsers, update } from "../../app/features/users/usersSlice";
 import { AppDispatch, RootState } from "../../app/store";
 import TextInput from "../../components/TextInput/TextInput";
 import CategoryList from "../../components/Category/Category";
@@ -42,10 +38,8 @@ export const EditPage = () => {
     selectUsers.selectById(state, Number(userId))
   );
 
-  const loading = useSelector(selectLoading);
-
   const onSubmit = (data: Inputs) => {
-    console.log('asds')
+    console.log("asds");
     dispatch(
       update({
         id: user.id,
@@ -72,7 +66,6 @@ export const EditPage = () => {
     setValue("companyName", user.company.name);
   }, [setValue, user]);
 
-  if (loading) return <h2>loading...</h2>;
   if (!user) return <h1>404</h1>;
 
   return (

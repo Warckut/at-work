@@ -4,7 +4,7 @@
   border-radius: 1rem;
   padding: 1.5rem;
   background-color: $white-color;
-
+  max-width: 360px;
   img {
     width: 112px;
     height: 120px;
@@ -21,11 +21,38 @@
     flex-direction: column;
     justify-content: space-between;
     margin-left: 1rem;
+    p {
+      font-size: 14px;
+      color: $gray-color;
+    }
   }
 
   .card-header {
     display: flex;
     justify-content: space-between;
-  }
+    .card-user-info {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex-shrink: 0;
+      max-width: 140px;
 
+      & > * {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .card-user-name {
+        font-size: 20px;
+        font-weight: 600;
+        color: $accent-color;
+      }
+      .card-company-name {
+        font-size: 16px;
+        color: $dark-gray-color;
+      }
+    }
+  }
 }

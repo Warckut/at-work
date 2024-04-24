@@ -1,6 +1,3 @@
-import { useSelector } from "react-redux";
-// import { useNavigate } from "react-router-dom";
-import { selectLoading } from "../../app/features/users/usersSlice";
 import { User } from "../../app/features/users/types";
 import Card from "../Card/Card";
 import "./user-list.scss";
@@ -11,9 +8,6 @@ interface UserListProps {
 }
 
 export const UserList = ({ users, type }: UserListProps) => {
-  const loading = useSelector(selectLoading);
-
-  if (loading) return <div>loading...</div>;
   if (users.length === 0) return;
 
   return (
