@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { EditPage } from "./pages/EditPage/EditPage";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,7 +13,8 @@ import Loading from "./components/Loading/Loading";
 function App() {
   const dispatch = useDispatch<AppDispatch>();
   const loading = useSelector(selectLoading);
-
+  const loc = useLocation();
+  console.log(loc.pathname);
   useEffect(() => {
     dispatch(fetchUsers());
   }, [dispatch]);
