@@ -9,14 +9,12 @@ const Navigate = () => {
   if (location.pathname === "/") return;
 
   return (
-    <div className="container">
       <div className="navigate">
         <a onClick={() => navigate(-1)}>
           <img src={goBack} alt="back" />
           <span>Назад </span>
         </a>
       </div>
-    </div>
   );
 };
 

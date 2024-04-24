@@ -21,8 +21,8 @@ function App() {
   return (
     <>
       <Header />
-      <Navigate />
       <div className="container">
+        <Navigate />
         {loading ? (
           <Loading />
         ) : (

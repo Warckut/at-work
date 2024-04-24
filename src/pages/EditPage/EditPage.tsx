@@ -7,9 +7,9 @@ import { AppDispatch, RootState } from "../../app/store";
 import TextInput from "../../components/TextInput/TextInput";
 import CategoryList from "../../components/Category/Category";
 import Button from "../../components/Button/Button";
-import "./edit-page.scss";
 import { useEffect, useState } from "react";
 import Popup from "../../components/Popup/Popup";
+import "./edit-page.scss";
 
 interface Inputs {
   name: string;

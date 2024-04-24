@@ -1,9 +1,15 @@
 .list {
-  margin-top: 40px;
+  margin-bottom: 2em;
+
   & > div {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    -ms-grid-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: start;
+
+    & > * {
+      flex-basis: calc(300px - 40px);
+      flex-grow: 1;
+    }
   }
 }
