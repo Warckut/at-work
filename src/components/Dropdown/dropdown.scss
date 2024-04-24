@@ -1,0 +1,41 @@
+.dropdown {
+  position: relative;
+
+  .dropdown-button {
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    background: url("../../assets/option.svg") no-repeat;
+    background-position: center;
+  }
+
+  .dropdown-button:hover {
+    cursor: pointer;
+    background: url("../../assets/option-hover.svg") no-repeat;
+    background-position: center;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    width: 200px;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 21px 0px;
+    background-color: $white-color;
+    border-radius: 12px;
+    top: 0;
+    right: 28px;
+    min-width: 100px;
+    z-index: 1;
+    li {
+      padding: 8px 12px;
+      font-size: 16px;
+      & + li {
+        margin-top: 9px;
+      }
+      &:hover {
+        color: $accent-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

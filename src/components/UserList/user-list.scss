@@ -1,0 +1,9 @@
+.list {
+  margin-top: 40px;
+  & > div {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

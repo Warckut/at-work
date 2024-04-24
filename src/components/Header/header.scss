@@ -1,0 +1,32 @@
+header {
+  padding: 16px 0;
+  background-color: $white-color;
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+    a {
+      height: 24px;
+    }
+  }
+
+  .right {
+    color: $dark-gray-color;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    img.user-photo {
+      margin: 0 10px 0 20px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.input-group {
+  margin-bottom: 24px;
+
+  label {
+    // margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  input {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 50px;
+    padding: 10px 8px 10px 16px;
+    margin-top: 13px;
+    font-size: 16px;
+    &:focus {
+      outline: none;
+    }
+  }
+}

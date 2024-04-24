@@ -1,0 +1,31 @@
+.edit-page {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+
+  & > div {
+    background-color: $white-color;
+    padding: 40px;
+    border-radius: 8px;
+  }
+
+  .preview {
+    width: 360px;
+
+    img {
+      max-width: 280px;
+      height: 480px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  .data {
+    width: 760px;
+    height: auto;
+    h3 {
+      font-size: 16px;
+    }
+  }
+}

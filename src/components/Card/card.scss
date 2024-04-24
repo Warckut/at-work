@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: $white-color;
+
+  img {
+    width: 112px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1rem;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
