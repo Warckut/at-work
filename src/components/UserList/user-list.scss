@@ -2,14 +2,8 @@
   margin-bottom: 2em;
 
   & > div {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 360px));
     gap: 40px;
-    justify-content: start;
-
-    & > * {
-      flex-basis: calc(300px - 40px);
-      flex-grow: 1;
-    }
   }
 }

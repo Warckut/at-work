@@ -10,7 +10,7 @@ const Header = () => {
   const navigate = useNavigate();
   return (
     <header>
-      <div className="container" style={{ padding: 0 }}>
+      <div className="container" style={{ paddingTop: 0, paddingBottom: 0 }}>
         <a onClick={() => navigate("/")} className="left">
           <img src={logo} alt="logo" />
         </a>
