@@ -20,13 +20,14 @@ export const UserList = ({ users, type }: UserListProps) => {
     <div className="list">
       <h2>{type === "Active" ? "Активные" : "В архиве"}</h2>
       <div>
-        {users.map(({ id, address, username, company }) => (
+        {users.map(({ id, address, username, company, archived }) => (
           <Card
             key={id}
             id={id}
             username={username}
             city={address.city}
             company={company.name}
+            archived={archived}
           />
         ))}
       </div>

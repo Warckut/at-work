@@ -10,6 +10,9 @@
     height: 120px;
     border-radius: 10px;
     object-fit: cover;
+    &.archived {
+      filter: grayscale(100%);
+    }
   }
 
   .card-content {

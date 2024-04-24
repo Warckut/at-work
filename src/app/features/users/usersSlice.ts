@@ -17,13 +17,16 @@ export const UsersSlice = createSlice({
     loading: false,
   },
   reducers: {
-    update: (state, { payload }: PayloadAction<User>) => {
+    update: (
+      state,
+      { payload }: PayloadAction<{ id: number; updated: Partial<User> }>
+    ) => {
       usersAdapter.updateOne(state.users, {
         id: payload.id,
-        changes: payload,
+        changes: payload.updated,
       });
     },
-    delete: (state, { payload }: PayloadAction<number>) => {
+    remove: (state, { payload }: PayloadAction<number>) => {
       usersAdapter.removeOne(state.users, payload);
     },
   },
@@ -49,5 +52,7 @@ export const selectLoading = createSelector(
   [(state: RootState) => state.UsersReducer],
   (data) => data.loading
 );
+
+export const { update, remove } = UsersSlice.actions;
 
 export default UsersSlice.reducer;

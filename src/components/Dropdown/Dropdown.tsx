@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import "./dropdown.scss";
 
-const Dropdown = () => {
+interface DropdownProps {
+  actions: { label: string; action: () => void }[];
+}
+
+const Dropdown = ({ actions }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const toggleDropdown = () => {
@@ -42,9 +46,13 @@ const Dropdown = () => {
       <div ref={ref} className="dropdown-button" onClick={toggleDropdown} />
       {isOpen && (
         <ul className="dropdown-menu">
-          <li>Редактировать</li>
+          {actions.map((v) => (
+            <li key={v.label} onClick={() => v.action()}>{v.label}</li>
+          ))}
+          {/* <li>Скрыть</li> */}
+          {/* <li>Редактировать</li>
           <li>Архивировать</li>
-          <li>Скрыть</li>
+          <li>Скрыть</li> */}
         </ul>
       )}
     </div>
