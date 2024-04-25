@@ -1,9 +1,26 @@
 .list {
   margin-bottom: 2em;
 
+  h2 {
+    font-size: $font-size-desktop-title;
+    margin-bottom: 1em;
+  }
+
   & > div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 360px));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .list {
+    margin-bottom: 2em;
+
+    & > div {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+    }
   }
 }

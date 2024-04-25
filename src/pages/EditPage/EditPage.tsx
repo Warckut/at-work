@@ -79,14 +79,14 @@ export const EditPage = () => {
         <div className="preview">
           <img src={photo} alt="photo" />
           <div className="content">
-            <h3>Данные профиля</h3>
+            <h3 className="border-bottom">Данные профиля</h3>
             <CategoryList
               values={["Рабочее пространство", "Приватность", "Безопасность"]}
             />
           </div>
         </div>
         <div className="data">
-          <h2>Данные профиля</h2>
+          <h2 className="border-bottom">Данные профиля</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <TextInput
               name="name"

@@ -3,8 +3,8 @@
 
   .dropdown-button {
     position: relative;
-    height: 2rem;
-    width: 2rem;
+    height: 24px;
+    width: 24px;
     background: url("../../assets/option.svg") no-repeat;
     background-position: center;
   }
@@ -36,6 +36,16 @@
         color: $accent-color;
         cursor: pointer;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .dropdown {
+    .dropdown-button,
+    .dropdown-button:hover {
+      background: url("../../assets/option-mb.svg") no-repeat;
+      background-position: center;
     }
   }
 }

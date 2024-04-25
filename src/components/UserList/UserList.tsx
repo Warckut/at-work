@@ -12,7 +12,9 @@ export const UserList = ({ users, type }: UserListProps) => {
 
   return (
     <div className="list">
-      <h2>{type === "Active" ? "Активные" : "В архиве"}</h2>
+      <h2 className="border-bottom">
+        {type === "Active" ? "Активные" : "В архиве"}
+      </h2>
       <div>
         {users.map(({ id, address, username, company, archived }) => (
           <Card

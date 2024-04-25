@@ -1,12 +1,25 @@
-// @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-
 $bg-color: #f4f4f4;
 $white-color: #fdfdfd;
 $accent-color: #22a0bc;
 $light-gray-color: #dadada;
-$gray-color: #9C9C9C;
+$gray-color: #9c9c9c;
 $dark-gray-color: #595959;
 $black-color: #161616;
+
+$font-size-desktop-title: 24px;
+$font-size-desktop-headline: 20px;
+$font-size-desktop-text-1: 18px;
+$font-size-desktop-text-2: 16px;
+$font-size-desktop-caption: 14px;
+
+$font-size-mobile-title: 24px;
+$font-size-mobile-headline: 18px;
+$font-size-mobile-text-1: 16px;
+$font-size-mobile-text-2: 14px;
+$font-size-mobile-caption: 10px;
+
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
 
 html {
   font-size: 14px;
@@ -47,21 +60,26 @@ input[type="submit"] {
   outline: none;
 }
 
-h2 {
-  padding-bottom: 15px;
-  margin-bottom: 24px;
+.border-bottom {
   border-bottom: 1px solid $light-gray-color;
-  font-size: 24px;
-}
-
-h3 {
-  padding-bottom: 11px;
-  margin-bottom: 24px;
-  border-bottom: 1px solid $light-gray-color;
+  padding-bottom: 0.5em;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1216px;
   padding: 2em;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 1em;
+  }
 }

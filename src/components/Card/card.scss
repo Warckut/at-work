@@ -1,58 +1,89 @@
 .card {
   display: flex;
-  justify-content: space-between;
-  border-radius: 1rem;
-  padding: 1.5rem;
+  justify-content: flex-start;
+  height: 168px;
+  border-radius: 1em;
+  padding: 1.5em;
   background-color: $white-color;
-  max-width: 360px;
 
   img {
-    width: 112px;
-    height: 120px;
+    width: 40%;
     border-radius: 10px;
     object-fit: cover;
+    margin-right: 1em;
     &.archived {
       filter: grayscale(100%);
     }
   }
 
-  .card-content {
-    flex: 1;
+  .card-body {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 1rem;
-    p {
-      font-size: 14px;
-      color: $gray-color;
-    }
   }
 
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    .card-user-info {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      flex-shrink: 0;
-      max-width: 140px;
+  .card-content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 1fr;
+    align-content: start;
+    flex-grow: 1;
 
-      & > * {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        flex-shrink: 0;
-      }
+    .card-user-name {
+      font-size: $font-size-desktop-headline;
+      color: $accent-color;
+    }
+
+    .card-company-name {
+      font-size: $font-size-desktop-text-2;
+      font-weight: $font-weight-medium;
+    }
+
+    .card-city {
+      font-size: $font-size-desktop-caption;
+      color: $gray-color;
+      align-self: end;
+      margin-top: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    padding: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: none;
+    height: auto;
+
+    img {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1em;
+    }
+
+    .card-body {
+      width: 100%;
+    }
+
+    .card-content {
+      width: 100%;
+      margin: 0;
 
       .card-user-name {
-        font-size: 20px;
-        font-weight: 600;
+        font-size: $font-size-mobile-headline;
         color: $accent-color;
       }
+  
       .card-company-name {
-        font-size: 16px;
-        color: $dark-gray-color;
+        font-size: $font-size-mobile-text-2;
+        font-weight: $font-weight-medium;
+      }
+  
+      .card-city {
+        font-size: $font-size-mobile-caption;
+        color: $gray-color;
+        align-self: end;
       }
     }
   }

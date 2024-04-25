@@ -51,15 +51,13 @@ const Card = ({ id, username, city, company, archived }: CardProps) => {
   return (
     <div className="card">
       <img className={archived ? "archived" : ""} src={photo} alt="photo" />
-      <div className="card-content">
-        <div className="card-header">
-          <div className="card-user-info">
-            <h4 className="card-user-name">{username}</h4>
-            <p className="card-company-name">{company}</p>
-          </div>
-          <Dropdown actions={actions} />
+      <div className="card-body">
+        <div className="card-content">
+          <h4 className="card-user-name overflow-hidden">{username}</h4>
+          <p className="card-company-name overflow-hidden">{company}</p>
+          <p className="card-city overflow-hidden">{city}</p>
         </div>
-        <p>{city}</p>
+        <Dropdown actions={actions} />
       </div>
     </div>
   );

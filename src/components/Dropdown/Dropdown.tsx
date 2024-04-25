@@ -47,12 +47,10 @@ const Dropdown = ({ actions }: DropdownProps) => {
       {isOpen && (
         <ul className="dropdown-menu">
           {actions.map((v) => (
-            <li key={v.label} onClick={() => v.action()}>{v.label}</li>
+            <li key={v.label} onClick={() => v.action()}>
+              {v.label}
+            </li>
           ))}
-          {/* <li>Скрыть</li> */}
-          {/* <li>Редактировать</li>
-          <li>Архивировать</li>
-          <li>Скрыть</li> */}
         </ul>
       )}
     </div>
