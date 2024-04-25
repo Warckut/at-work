@@ -11,9 +11,6 @@
     border-radius: 10px;
     object-fit: cover;
     margin-right: 1em;
-    &.archived {
-      filter: grayscale(100%);
-    }
   }
 
   .card-body {
@@ -36,6 +33,7 @@
     .card-company-name {
       font-size: $font-size-desktop-text-2;
       font-weight: $font-weight-medium;
+      color: $dark-gray-color;
     }
 
     .card-city {
@@ -43,6 +41,18 @@
       color: $gray-color;
       align-self: end;
       margin-top: 1em;
+    }
+  }
+
+  &.archived {
+    img {
+      filter: grayscale(100%);
+    }
+
+    .card-content {
+      .card-user-name {
+        color: $dark-gray-color;
+      }
     }
   }
 }
@@ -74,12 +84,12 @@
         font-size: $font-size-mobile-headline;
         color: $accent-color;
       }
-  
+
       .card-company-name {
         font-size: $font-size-mobile-text-2;
         font-weight: $font-weight-medium;
       }
-  
+
       .card-city {
         font-size: $font-size-mobile-caption;
         color: $gray-color;

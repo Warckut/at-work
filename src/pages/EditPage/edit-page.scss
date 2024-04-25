@@ -10,10 +10,12 @@
   }
 
   .preview {
-    width: 360px;
+    width: 35%;
+    min-width: 360px;
+    margin-right: 40px;
 
     img {
-      max-width: 280px;
+      width: 100%;
       height: 480px;
       margin-bottom: 40px;
       border-radius: 10px;
@@ -42,5 +44,30 @@
 }
 
 @media screen and (max-width: 800px) {
+  .edit-page {
+    flex-direction: column;
+    .preview {
+      width: 100%;
+      min-width: auto;
+      margin-bottom: 2em;
+      img {
+        max-height: 187px;
+      }
+    }
+    .data {
+      width: 100%;
+    }
+  }
+}
 
+@media screen and (max-width: 940px) {
+  // .edit-page > .preview > .data {
+
+  // }
+  .edit-page > .data > form {
+    max-width: none;
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
 }

@@ -28,7 +28,8 @@
     z-index: 1;
     li {
       padding: 8px 12px;
-      font-size: 16px;
+      font-size: $font-size-desktop-text-2;
+      font-weight: $font-weight-medium;
       & + li {
         margin-top: 9px;
       }
@@ -42,6 +43,13 @@
 
 @media screen and (max-width: 800px) {
   .dropdown {
+    .dropdown-menu {
+      width: 160px;
+      li {
+        font-size: $font-size-mobile-text-2;
+      }
+    }
+
     .dropdown-button,
     .dropdown-button:hover {
       background: url("../../assets/option-mb.svg") no-repeat;
