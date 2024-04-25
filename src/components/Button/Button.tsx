@@ -5,18 +5,8 @@ interface ButtonProps {
   onSubmit: () => void;
 }
 
-const Button = ({ name, }: ButtonProps) => {
-  return (
-    <input
-      className="btn"
-      type="submit"
-      // onClick={(e) => {
-      //   e.preventDefault();
-      //   onSubmit();
-      // }}
-      value={name}
-    />
-  );
+const Button = ({ name }: ButtonProps) => {
+  return <input className="btn" type="submit" value={name} />;
 };
 
 export default Button;

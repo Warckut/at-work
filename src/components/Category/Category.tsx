@@ -8,7 +8,9 @@ const CategoryList = ({ values }: CategoryListProps) => {
   return (
     <ul>
       {values.map((v) => (
-        <li key={v} className="category">{v}</li>
+        <li key={v} className="category">
+          {v}
+        </li>
       ))}
     </ul>
   );
